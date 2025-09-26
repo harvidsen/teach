@@ -18,13 +18,16 @@
 
       packages.${system} = {
         inherit (pkgs.python3.pkgs) asciimatics;
-        default = pkgs.python3.pkgs.callPackage ./first_build.nix { };
+        first_build = pkgs.python3.pkgs.callPackage ./first_build.nix { };
+        default = pkgs.python3.pkgs.callPackage ./build_python_package.nix { };
       };
 
       devShells.${system}.default = pkgs.mkShell {
         inputsFrom = [
           self.packages.${system}.default
         ];
+
+        packages = [ pkgs.uv ];
 
         shellHook = ''
           root=$(git rev-parse --show-toplevel)/pynix

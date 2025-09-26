@@ -14,3 +14,14 @@
 ## Editable mode
 - Now if we refactor our package and want to change our motivational message. It doesn't change?
 - Use shellHook to "install" package in "editable mode"
+
+## Use a build helper like a sane person
+- Init pyproject.toml with uv
+- buildPythonPackage
+  - How they do it in nixpkgs
+
+## Pytest and flake checks
+
+## pyproject-nix
+
+## uv2nix
