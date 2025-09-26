@@ -3,6 +3,8 @@ from asciimatics.scene import Scene
 from asciimatics.screen import Screen
 from asciimatics.effects import Print
 
+from ashow.yeah import get_motivational_word
+
 
 def demo(screen):
     scenes = []
@@ -25,7 +27,7 @@ def demo(screen):
         ),
         Print(
             screen,
-            FigletText("Yeah!", "banner3"),
+            FigletText(get_motivational_word(), "banner3"),
             (screen.height - 4) // 2,
             colour=Screen.COLOUR_BLACK,
             speed=1,
