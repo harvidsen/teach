@@ -1,15 +1,26 @@
 {
-  description = "A very basic flake";
+  description = "An example python project";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
   };
 
-  outputs = { self, nixpkgs }: {
+  outputs =
+    { nixpkgs, ... }:
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+      };
 
-    packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
+    in
+    {
 
-    packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
+      devShells.${system}.default = pkgs.mkShell {
+        packages = [
+          pkgs.python3.pkgs.asciimatics
+        ];
+      };
 
-  };
+    };
 }
