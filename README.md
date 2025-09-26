@@ -7,3 +7,4 @@ Welcome to my various teachings! Whenever I teach someone something, I put examp
 - **nodocker:** Make docker images with Nix
 - **golang:** Intro to programming with go
 - **introgit:** Basic introduction to what git does and how to do it
+- **pynix:** How to leverage nix flakes when developing a python package
