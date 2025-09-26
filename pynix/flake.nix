@@ -6,7 +6,7 @@
   };
 
   outputs =
-    { nixpkgs, ... }:
+    { self, nixpkgs }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -16,9 +16,14 @@
     in
     {
 
+      packages.${system} = {
+        inherit (pkgs.python3.pkgs) asciimatics;
+        default = pkgs.python3.pkgs.callPackage ./first_build.nix { };
+      };
+
       devShells.${system}.default = pkgs.mkShell {
         packages = [
-          pkgs.python3.pkgs.asciimatics
+          self.packages.${system}.default
         ];
       };
 
