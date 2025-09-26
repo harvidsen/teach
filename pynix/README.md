@@ -5,3 +5,4 @@
   - Standardized flake schema makes `nix` commands appear a bit magic
 - Import `pkgs` from `nixpkgs` and add it to default devshell
   - `nix develop`
+- We can run our python script with `python src/ashow/flame.py`
