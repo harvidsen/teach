@@ -22,9 +22,14 @@
       };
 
       devShells.${system}.default = pkgs.mkShell {
-        packages = [
+        inputsFrom = [
           self.packages.${system}.default
         ];
+
+        shellHook = ''
+          root=$(git rev-parse --show-toplevel)/pynix
+          export PYTHONPATH="$root/src:$PYTHONPATH"
+        '';
       };
 
     };
