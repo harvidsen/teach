@@ -31,4 +31,8 @@
 - Parses more of the pyproject.toml
 - Nice for tidying up
 
-## uv2nix
+## [uv2nix](https://github.com/pyproject-nix/uv2nix?tab=readme-ov-file)
+- Read and get dependencies form pypi via pyproject.yoml
+  - More like regular uv packaging
+  - No nixpkgs to tell you what version should be used
+
