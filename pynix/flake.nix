@@ -15,11 +15,14 @@
 
     in
     {
-
       packages.${system} = {
         inherit (pkgs.python3.pkgs) asciimatics;
         first_build = pkgs.python3.pkgs.callPackage ./first_build.nix { };
         default = pkgs.python3.pkgs.callPackage ./build_python_package.nix { };
+      };
+
+      checks.${system} = {
+        inherit (self.packages.${system}) default;
       };
 
       devShells.${system}.default = pkgs.mkShell {
