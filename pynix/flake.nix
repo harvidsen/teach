@@ -26,6 +26,7 @@
     {
       packages.${system} = {
         inherit (pkgs.python3.pkgs) asciimatics;
+        simple_build = pkgs.callPackage ./simple_build.nix { };
         first_build = pkgs.python3.pkgs.callPackage ./first_build.nix { };
         second_build = pkgs.python3.pkgs.callPackage ./build_python_package.nix { };
         default = pkgs.python3.pkgs.callPackage ./pyproject_build.nix { inherit pyproject-nix; };
