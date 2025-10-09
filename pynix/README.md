@@ -27,5 +27,8 @@
 - We should still be able to just run pytest in the project
 
 ## pyproject-nix
+- Is an new flake input
+- Parses more of the pyproject.toml
+- Nice for tidying up
 
 ## uv2nix
