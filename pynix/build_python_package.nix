@@ -2,6 +2,7 @@
   buildPythonPackage,
   asciimatics,
   hatchling,
+  pytestCheckHook,
 }:
 
 buildPythonPackage {
@@ -13,4 +14,6 @@ buildPythonPackage {
   build-system = [ hatchling ];
 
   propagatedBuildInputs = [ asciimatics ];
+
+  nativeCheckInputs = [ pytestCheckHook ];
 }

@@ -27,7 +27,10 @@
           self.packages.${system}.default
         ];
 
-        packages = [ pkgs.uv ];
+        packages = [
+          pkgs.uv
+          pkgs.python3.pkgs.pytest
+        ];
 
         shellHook = ''
           root=$(git rev-parse --show-toplevel)/pynix
