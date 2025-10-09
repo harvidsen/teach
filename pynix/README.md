@@ -21,6 +21,10 @@
   - How they do it in nixpkgs
 
 ## Pytest and flake checks
+- Add pytest
+- Use pytestCheckHook
+- Include in flake checks
+- We should still be able to just run pytest in the project
 
 ## pyproject-nix
 
