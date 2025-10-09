@@ -10,6 +10,7 @@
   - `nix build` then inspect output `ls result`
   - Run the installed package `run_flame_show`
   - Or import in python `python -c "import ashow"`
+- Take a look at the package in `nix repl`
 
 ## Editable mode
 - Now if we refactor our package and want to change our motivational message. It doesn't change?
@@ -19,6 +20,7 @@
 - Init pyproject.toml with uv
 - buildPythonPackage
   - How they do it in nixpkgs
+- Take a look at the package in `nix repl`
 
 ## Pytest and flake checks
 - Add pytest
@@ -30,6 +32,7 @@
 - Is an new flake input
 - Parses more of the pyproject.toml
 - Nice for tidying up
+- Take a look at the package in `nix repl`
 
 # Other things
 
