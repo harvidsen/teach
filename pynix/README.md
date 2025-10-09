@@ -31,6 +31,8 @@
 - Parses more of the pyproject.toml
 - Nice for tidying up
 
+# Other things
+
 ## [uv2nix](https://github.com/pyproject-nix/uv2nix?tab=readme-ov-file)
 - Read and get dependencies form pypi via pyproject.yoml
   - More like regular uv packaging
@@ -40,3 +42,6 @@
 - Non-python dependencies giving you a hard time?
   - Add them to you package too
 - Really show it by disabling the devshell
+
+## [devenv](https://devenv.sh/)
+- A really simple way of using nix for defining develop environments
