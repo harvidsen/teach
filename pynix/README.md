@@ -36,3 +36,7 @@
   - More like regular uv packaging
   - No nixpkgs to tell you what version should be used
 
+## Sales pitch for new nix people
+- Non-python dependencies giving you a hard time?
+  - Add them to you package too
+- Really show it by disabling the devshell

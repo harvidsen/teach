@@ -1,2 +1,8 @@
+import subprocess
+
+
 def get_motivational_word() -> str:
-    return "Yess!"
+    proc = subprocess.run(["cowsay", "OK!"], capture_output=True)
+    if proc.returncode != 0:
+        raise SystemError(f"Process returned {proc.stderr.decode()}")
+    return proc.stdout.decode()
