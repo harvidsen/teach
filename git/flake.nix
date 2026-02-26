@@ -20,7 +20,10 @@
     {
       devShells.${system}.default = pkgs.mkShell {
         packages = with pkgs; [
-          slides
+          # slides
+          # graph-easy
+          presenterm
+          mermaid-cli
         ];
       };
     };
